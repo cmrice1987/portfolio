@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Buffalo River Project</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="logo">
+            <img class="resize" src="assets/img/c&c-opt.png" alt="website logo">
+          </div>
+
+            <div class="nav">
+                <input type="checkbox" id="nav-check">
+                <div class="nav-header">
+                    <div class="nav-title">
+                        Buffalo River Cabins &amp; Canoes
+                    </div>
+                </div>
+                <div class="nav-btn">
+                    <label for="nav-check">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="nav-links">
+                    <a href="index.html" title="Home">Home</a>
+                    <a href="adventures.html" title="Adventures">Adventures</a>
+                    <a href="directions.html" title="Directions">Directions</a>
+                    <a href="rental-form.html" title="Rentals / Reservations">Rentals/Reservations</a>
+                    <a href="river-levels.html" title="River Gauge Data">River Levels</a>
+                    <a href="gallery.html" title="Galley">Gallery</a>
+                </div>
+            </div>
+
+        </header>
+
+        <section id="content">
+            <h1>Book A Stay</h1>
+
+            <form action="https://getform.io/f/598c7ba8-3189-4b3f-abc7-744cddc49a61" method="POST" id="rentalForm">
+
+                <br>
+                <label for="email">Email Address: </label><br>
+                <input type="email" name="email" required><br><br>
+
+                <label for="canoes">1 Day Canoe Rentals (Tax Included):</label><br>
+                <input type="radio" id="1" name="canoes" value="1" required>
+                <label for="1">1 Canoe - $67.00</label><br>
+
+                <input type="radio" id="2" name="canoes" value="2">
+                <label for="2">2 Canoes - $134.00</label><br>
+
+                <input type="radio" id="3" name="canoes" value="3">
+                <label for="3">3 Canoes - $201.00</label><br>
+
+                <input type="radio" id="4" name="canoes" value="4">
+                <label for="4">4 Canoes - $268.00</label><br>
+
+                <input type="radio" id="5" name="canoes" value="5">
+                <label for="5">5 Canoes - $335.00</label><br>
+
+                <input type="radio" id="6" name="canoes" value="6">
+                <label for="6">6 Canoes - $402.00</label><br>
+
+                <input type="radio" id="7" name="canoes" value="7">
+                <label for="7">7 Canoes - $455.00</label><br>
+
+                <input type="radio" id="8" name="canoes" value="8">
+                <label for="8">8 Canoes - $536.00</label><br>
+
+                <input type="radio" id="9" name="canoes" value="9">
+                <label for="9">9 Canoes - $603.00</label><br>
+
+                <input type="radio" id="10" name="canoes" value="10">
+                <label for="10">10 Canoes - $670.00</label><br>
+
+                <input type="radio" id="0" name="canoes" value="0">
+                <label for="0">N/A</label><br><br>
+
+                <!------------------------------------------------>
+
+                <label for="trip">Trip Options:</label><br>
+                <p>We offer shuttling services to the following put-in/take outs on the river. These prices are in addition to the canoe rental price and cover the shuttle cost of one vehicle.</p>
+                <p>Please select your desidred destination from the launch site in Ponca.</p>
+                <input type="radio" id="sc" name="trip" value="Steel Creek" required>
+                <label for="sc">Steel Creek (2.7 miles | approx 1 &#38; 1/2 hours) - $21.00</label><br>
+
+                <input type="radio" id="kyles" name="trip" value="Kyles">
+                <label for="kyles">Kyles (10.7 miles | approx 5 &#38; 1/2 hours) - $40.00</label><br>
+
+                <input type="radio" id="erbie" name="trip" value="Erbie">
+                <label for="erbie">Erbie (16.3 miles | approx 8 &#38; 1/4 hours) - $92.00</label><br>
+
+                <input type="radio" id="ozark" name="trip" value="Ozark">
+                <label for="ozark">Ozark (21.8 miles | approx 11 hours) - $61.00</label><br>
+
+                <input type="radio" id="pruitt" name="trip" value="Pruitt">
+                <label for="pruitt">Pruitt (23.9 miles | approx 12 hours) - $55.00</label><br>
+
+                <input type="radio" id="hasty" name="trip" value="Hasty">
+                <label for="hasty">Hasty (30.7 miles | approx 15 &#38; 1/2 hours) - $55.00</label><br>
+
+                <input type="radio" id="carver" name="trip" value="Hwy 123 / Carver">
+                <label for="carver">Hwy 123 / Carver (34.9 miles | approx 17 &#38; 1/2 hours - $65.00</label><br>
+
+                <input type="radio" id="alt" name="trip" value="Kyles to Pruitt">
+                <label for="alt">Alternate Option - Kyles to Pruitt (13.2 miles | approx 6 &#38; 1/2 hours) - $55.00</label><br>
+
+                <input type="radio" id="none" name="trip" value="N/A">
+                <label for="none">N/A</label><br><br>
+
+                <!------------------------------------------------>
+
+                <label for="cabin">Cabin Rental:</label><br>
+                <p>Cabin amenities available to view <a href="adventures.html" title="Adventures" target="_blank">here</a>.</p>
+
+                <label for="checkin">Check-In Date</label><br>
+                <input type="date" id="checkin" name="checkin"><br><br>
+
+
+                <label for="checkout">Check-Out Date</label><br>
+                <input type="date" id="checkout" name="checkout"><br>
+
+                <br><br>
+                <button type="submit">Submit</button>
+
+            </form>
+
+            <span id="contact">
+                <h5>Have any questions? Contact us!</h5>
+                <ul>
+                    <li>Phone: 501-498-3092</li>
+                    <li>Email: tsw@cabins&#38;canoes.com</li>
+                </ul>
+            </span>
+
+            <footer id="colophon" role="contentinfo">
+    <h6>&copy; 2020 JavaSquad</h6>
+  </footer>
+
+
+        </section>
+        <!--#content-->
+    </div>
+    <!--.container-->
+    <script src="script.js"></script>
+</body>
+
+</html>

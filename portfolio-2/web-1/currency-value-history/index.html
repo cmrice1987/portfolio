@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="JavaScript Calculator">
+	<meta name="keywords" content="JavaScript, HTML, CSS">
+	<meta name="author" content="Candice Rice">
+	<title>Currency Value History</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="assets/js/chart.js"></script>
+</head>
+
+<body>
+	<div class="navbar">
+		<header class="primary">
+			<h1>Currency Value History</h1>
+			<nav id="primary">
+				<a href="https://candicerice.candicerice.repl.co/">Home</a>
+				<a href="https://candicerice.candicerice.repl.co/portfolio.html">Portfolio</a>
+				<a href="https://candicerice.candicerice.repl.co/contact.html">Contact</a>
+			</nav>
+		</header>
+	</div>
+	
+	<form id="Valueform" onsubmit="return false">
+		<div class="formcontainer">
+      
+
+	<label class="formlabel">Base Currency: </label>
+<select name="selBase" id="basecurrency"                
+        data-rule-required="true" 
+        data-msg-required="Base Currency is Required">
+    <option value="">Select an Currency...</option>
+    <option value="USD"> US Dollars </option>
+    <option value="GBP">Great Britain Pound</option>
+    <option value="MXN">Mexican Peso</option>
+    <option value="CAD">Canadian Dollar</option>
+    <option value="EUR">European Dollar</option>
+    </select>
+     <label for="selBase" class="error"></label>
+    <span id="selBaseError"></span>
+            <br>
+
+        <label class="formlabel">Convert to Currency: </label>
+<select name="selConvert" id="convertcurrency"                
+        data-rule-required="true" data-msg-required="Converted Currency is Required">
+    <option value="">Select an Currency...</option>
+    <option value="USD"> US Dollars </option>
+    <option value="GBP">Great Britain Pound</option>
+    <option value="MXN">Mexican Peso</option>
+    <option value="CAD">Canadian Dollar</option>
+    <option value="EUR">European Dollar</option>
+    </select>
+     <label for="selConvert" class="error"></label>
+     <span id="selConvertError"></span>
+
+            <br>
+
+    <label for="FromDate" class="formlabel">From Date: </label>
+    <input type="date" id="FromDate" name="FromDate"
+         data-rule-required="true"  data-msg-required="From Date is Required">
+    <label for="FromDate" class="error" id="FromDateError"></label>
+            <br>
+
+    <label for="ToDate" class="formlabel">To Date: </label>
+    <input type="date" id="ToDate" name="ToDate"
+          data-rule-required="true"  data-msg-required="To Date is Required">
+                    <label for="ToDate" class="error" id="ToDateError" ></label>
+            <br>
+    <label for="ajaxresult" class="formlabel"></label>
+    <span id="ajaxresult"></span>
+            <br>
+
+    <input type="submit" value="Show Results" name="ShowResults" onclick="calculate()">
+    <input type="submit" value="Clear Form" name="Clear" onclick="clearForm()">
+    
+
+<canvas id="chartjs-0" width="400" height="400" style="display: block; height: 400px; width: 400px;"></canvas>
+      
+    </div>
+</form>
+
+</body>
+</html>

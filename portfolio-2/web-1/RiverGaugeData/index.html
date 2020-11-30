@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Candice Rice">
+    	<title>USGS Water Services AJAX Example</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src= "http://waterservices.usgs.gov/nwis/iv/format=json&indent=on&sites=07055646,07055660,07055680,07055780&period=P7D&parameterCd=00065&siteStatus=all"></script>
+   <script src="assets/js/script.js"></script>
+
+
+	<h1>USGS Water Services AJAX</h1>
+	<form id="form1" method="post" action="">
+
+    	<label for="sitedesc0">Site Description</label>
+      
+    	<inputtextarea name="sitedesc0" cols="25" rows="2" readonly="readonly" id="sitedesc0"></textarea>
+    	<label for="discharge0">Latest Streamflow ft.<sup>3</sup>/sec</label>
+    	<input id="discharge0" size="7" readonly="readonly" />
+    	<br><br>
+
+    	<label for="sitedesc1">Site Description</label>
+    	<input type="text" name="sitedesc1" cols="25" rows="2" readonly="readonly" id="sitedesc1"></textarea>
+    	<label for="discharge1">Latest Streamflow ft.<sup>3</sup>/sec</label>
+    	<input id="discharge1" size="7" readonly="readonly" />
+    	<br><br>
+
+    	<label for="sitedesc2">Site Description</label>
+    	<textarea name="sitedesc2" cols="25" rows="2" readonly="readonly" id="sitedesc2"></textarea>
+    	<label for="discharge2">Latest Streamflow ft.<sup>3</sup>/sec</label>
+    	<input id="discharge2" size="7" readonly="readonly" />
+    	<br><br>
+
+    	<label for="sitedesc3">Site Description</label>
+    	<textarea name="sitedesc3" cols="25" rows="2" readonly="readonly" id="sitedesc3"></textarea>
+    	<label for="discharge3">Latest Streamflow ft.<sup>3</sup>/sec</label>
+    	<input id="discharge3" size="7" readonly="readonly" />
+    	<br><br>
+
+    	<p>
+        	<input type="button" name="query" id="query" value="Get The Data" />
+        	<input type="reset" name="reset" id="reset" value="Reset" />
+    	</p>
+
+
+	</form>
+
+	
+</body>
+
+</html>
+
